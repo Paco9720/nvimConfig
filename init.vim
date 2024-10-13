@@ -1,5 +1,6 @@
-colorscheme dark
+colorscheme black
 set number
+set clipboard+=unnamedplus
 
 nmap <c-w> :w<cr>
 nmap <c-q> :q<cr>
