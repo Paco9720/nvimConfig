@@ -1,4 +1,4 @@
-colorscheme newvim
+colorscheme classic
 set number
 set clipboard+=unnamedplus
 
