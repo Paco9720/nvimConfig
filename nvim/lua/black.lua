@@ -13,22 +13,28 @@ M.setup = function()
     -- Define el fondo del editor como oscuro
     vim.opt.background = 'dark'
 
-    -- Define tu paleta de colores personalizada para un fondo negro
+    -- Define tu paleta de colores personalizada para un fondo "vainilla" oscuro
     local colors = {
-        background = "#000000",      -- ¡Negro puro para el fondo principal!
-        background_light = "#1E1E1E", -- Un gris muy oscuro para elementos como CursorLine
-        foreground = "#E0E0E0",     -- Un gris claro para el texto principal
-        comment = "#888888",        -- Gris medio para los comentarios
-        red = "#FF6B6B",            -- Rojo vivo
-        green = "#6BFF6B",          -- Verde brillante
-        blue = "#6BA8FF",           -- Azul eléctrico
-        yellow = "#FFFF6B",         -- Amarillo brillante
-        orange = "#FFA500",          -- Naranja vibrante
-        magenta = "#FF6BFF",        -- Magenta brillante
-        cyan = "#6BFFFF",           -- Cian brillante
-        purple = "#BF6BFF",         -- Púrpura intenso
-        light_gray = "#555555",     -- Gris oscuro para separadores, líneas de número inactivas
-        selection_bg = "#333333",   -- Fondo para selecciones visuales
+        -- Fondo principal, similar al default de Neovim (un gris azulado oscuro)
+        background = "#282A36",
+        -- Un color ligeramente más claro para elementos como CursorLine, StatusLine
+        background_light = "#3A3F4B",
+        -- Color del texto principal
+        foreground = "#F8F8F2",     -- Blanco suave
+        -- Comentarios
+        comment = "#6272A4",        -- Azul grisáceo suave para comentarios
+        -- Colores de acento
+        red = "#FF5555",            -- Rojo
+        green = "#50FA7B",          -- Verde
+        blue = "#8BE9FD",           -- Cian/Azul claro
+        yellow = "#F1FA8C",         -- Amarillo
+        orange = "#FFB86C",         -- Naranja
+        magenta = "#FF79C6",        -- Rosa/Magenta
+        cyan = "#8BE9FD",           -- Cian (duplicado para consistencia, puedes cambiarlo)
+        purple = "#BD93F9",         -- Púrpura
+        -- Colores para UI y elementos secundarios
+        light_gray = "#44475A",     -- Gris oscuro para líneas de número inactivas, separadores
+        selection_bg = "#44475A",   -- Fondo para selecciones visuales
     }
 
     -- Función auxiliar para aplicar grupos de resaltado
@@ -127,3 +133,4 @@ M.setup = function()
 end
 
 return M
+
