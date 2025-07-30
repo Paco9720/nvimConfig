@@ -1,3 +1,3 @@
-require('theme').setup()
+require('black').setup()
 require('plugs')
 require('config')
