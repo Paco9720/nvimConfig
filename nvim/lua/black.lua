@@ -16,7 +16,7 @@ M.setup = function()
     -- Define tu paleta de colores personalizada para un fondo "vainilla" oscuro
     local colors = {
         -- Fondo principal, similar al default de Neovim (un gris azulado oscuro)
-        background = "#282A36",
+        background = "#212430",
         -- Un color ligeramente más claro para elementos como CursorLine, StatusLine
         background_light = "#3A3F4B",
         -- Color del texto principal
