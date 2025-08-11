@@ -65,3 +65,4 @@ map("n", "<leader>F", function() vim.lsp.buf.format { async = true } end, { desc
 map("n", "[d", vim.diagnostic.goto_prev, { desc = "Ir al diagnóstico anterior" })
 map("n", "]d", vim.diagnostic.goto_next, { desc = "Ir al diagnóstico siguiente" })
 map("n", "<leader>ld", vim.diagnostic.open_float, { desc = "Mostrar diagnóstico flotante" })
+

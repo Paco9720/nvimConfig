@@ -108,4 +108,39 @@ return {
       require("telescope").setup {}
     end,
   },
+  
+  {
+   -- El motor de autocompletado
+  "hrsh7th/nvim-cmp",
+  event = "InsertEnter",
+  dependencies = {
+    -- Fuentes para el autocompletado
+    "hrsh7th/cmp-nvim-lsp", -- Autocompletado del LSP
+    "hrsh7th/cmp-buffer",   -- Autocompletado del buffer actual
+    "hrsh7th/cmp-path",     -- Autocompletado de rutas de archivo
+    "hrsh7th/cmp-cmdline",  -- Autocompletado de la línea de comandos
+    
+    -- Iconos y snippets (opcionales pero muy recomendados)
+    "L3MON4D3/LuaSnip",
+    "saadparwaiz1/cmp_luasnip",
+  },
+  config = function()
+    -- Mapeo de teclas y configuración general de nvim-cmp
+    local cmp = require("cmp")
+    cmp.setup({
+      mapping = cmp.mapping.preset.insert({
+        ["<C-Space>"] = cmp.mapping.complete(),
+        ["<CR>"] = cmp.mapping.confirm({ select = true }),
+        ["<Tab>"] = cmp.mapping.select_next_item(),
+        ["<S-Tab>"] = cmp.mapping.select_prev_item(),
+      }),
+      sources = cmp.config.sources({
+        { name = "nvim_lsp" },
+        { name = "luasnip" },
+        { name = "buffer" },
+        { name = "path" },
+      }),
+    })
+  end
+  },
 }
