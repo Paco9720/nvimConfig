@@ -19,7 +19,7 @@ map("n", "<leader>k", ":resize +2<CR>", { desc = "Aumentar alto de ventana" })
 -- Guardar y salir
 map("n", "<leader>w", ":w<CR>", { desc = "Guardar archivo" })
 map("n", "<leader>q", ":q<CR>", { desc = "Cerrar ventana/buffer" })
-map("n", "<leader>Q", ":qa<CR>", { desc = "Cerrar todas las ventanas/buffers" })
+map("n", "<leader>Q", ":q!<CR>", { desc = "Cerrar todas las ventanas/buffers" })
 
 -- Modo Visual
 
