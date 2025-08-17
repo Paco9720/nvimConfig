@@ -20,35 +20,15 @@ vim.g.maplocalleader = " "
 require("options")
 require("keymaps")
 
--- Cargar plugins
-require("lazy").setup("plugs")
+-- ... (código de bootstrap y require de options y keymaps) ...
 
--- Cargar tema de colores personalizado
-require("colorscheme").setup()
+-- Cargar plugins
+require("lazy").setup({
+  spec = {{ import = "plugs" }},
+})
+
+require("black")
+
 
 vim.opt.fillchars = { eob = ' ' }
-
--- Función para enviar el texto seleccionado a gemini-cli
-function GeminiCli(prompt)
-  -- Obtiene el texto seleccionado en modo visual
-  local text = vim.fn.getreg("v")
-  if text == "" then
-    print("No se ha seleccionado texto.")
-    return
-  end
-  
-  -- Genera el comando
-  local command = 'gemini-cli -p "' .. text .. '"'
-
-  -- Ejecuta el comando y captura la salida
-  local output = vim.fn.system(command)
-
-  -- Inserta la salida en Neovim
-  vim.api.nvim_buf_set_lines(0, vim.fn.line("."), vim.fn.line("."), false, {output})
-end
-
--- Crea un comando en Neovim
-vim.api.nvim_create_user_command("GeminiCli", GeminiCli, {
-  desc = "Envía texto a gemini-cli para su procesamiento",
-})
 
