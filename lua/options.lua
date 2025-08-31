@@ -40,3 +40,6 @@ vim.opt.isfname:append("@-@")     -- Caracteres adicionales para nombres de arch
 vim.opt.wrap = false               -- No envolver líneas largas
 
 vim.opt.clipboard = 'unnamedplus'
+
+vim.o.encoding = "utf-8"
+vim.o.fileencoding = "utf-8"
