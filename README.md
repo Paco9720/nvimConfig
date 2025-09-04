@@ -1,4 +1,9 @@
-Usar lazyvim como gesator de paquetes git clone https://github.com/folke/lazy.nvim.git ~/.local/share/nvim/lazy/lazy.nvim
+intstall
+
+linux
+git clone https://github.com/Paco9720/nvimConfig.git ~/.config/nvim
 
 
-git clone https://github.com/folke/lazy.nvim.git C:\Users\jp97\AppData\Local
+
+windows
+https://github.com/Paco9720/nvimConfig.git C:\Users\jp97\AppData\Local\nvim
