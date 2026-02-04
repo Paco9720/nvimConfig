@@ -5,7 +5,7 @@ vim.g.colors_name = "black"
 
 -- 2. Define tu paleta de colores
 local colors = {
-  bg = "#2b2b2b",
+  bg = "#000000",
   fg = "#d4d4d4",
   red = "#e06c75",
   green = "#98c379",

@@ -15,7 +15,7 @@ local colors = {
   cyan = "#56b6c2",
   comment = "#5c6370",
   selection = "#3e4452",
-  cursorline = "#2c323d",
+  cursorline = "#3e0000",
 }
 
 -- 3. Define los grupos de resaltado
